@@ -1,0 +1,30 @@
+<script>
+    // IIFE (Immediately Invoked Function Expression)
+(function () {
+ var x = 10;
+ var y = 5;
+ 
+ // Callback function
+ function add(a, b, callback) {
+ var result = a + b;
+ callback(result);
+ }
+ 
+ // Closure
+ function multiplyBy(factor) {
+ return function (number) {
+ return number * factor;
+ };
+ }
+ 
+ add(x, y, function (sum) {
+ console.log('Sum:', sum);
+ 
+ var multiplyByTwo = multiplyBy(2);
+ var multiplyByThree = multiplyBy(3);
+ 
+ console.log('Multiply by 2:', multiplyByTwo(sum));
+ console.log('Multiply by 3:', multiplyByThree(sum));
+ });
+ })();
+    </Script>
