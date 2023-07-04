@@ -1,0 +1,32 @@
+<script>
+    // Define a class to represent a person
+class Person {
+ constructor(name, age) {
+ this.name = name;
+ this.age = age;
+ }
+ 
+ sayHello() {
+ console.log(`Hello, my name is ${this.name} and I am ${this.age} years 
+old.`);
+ }
+ }
+ 
+ // Create instances of the Person class
+ const person1 = new Person('Anchal Kumari', 22);
+ const person2 = new Person('Anvi', 23);
+ 
+ // Create a map to store the person objects
+ const personMap = new Map();
+ 
+ // Add person objects to the map
+ personMap.set('person1', person1);
+ personMap.set('person2', person2);
+ 
+ // Access and use the person objects from the map
+ const retrievedPerson1 = personMap.get('person1');
+ retrievedPerson1.sayHello();
+ 
+ const retrievedPerson2 = personMap.get('person2');
+ retrievedPerson2.sayHello();
+    </script>
