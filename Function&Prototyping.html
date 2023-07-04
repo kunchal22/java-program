@@ -1,0 +1,28 @@
+<script>// Function Declaration
+function sayHello() {
+ console.log("Hello!");
+ }
+ 
+ sayHello(); // Output: Hello!
+ 
+ // Function Expression
+ var addNumbers = function(num1, num2) {
+ return num1 + num2;
+ };
+ 
+ var result = addNumbers(34565, 22210);
+ console.log(result); // Output: 56775
+ 
+ // Prototyping
+ function Person(name, age) {
+ this.name = name;
+ this.age = age;
+ }
+ 
+ Person.prototype.sayName = function() {
+ console.log("My name is " + this.name);
+ };
+ 
+ var john = new Person("Anchal Kumari", 22);
+ john.sayName(); // Output: My name is Anchal Kumari
+ </script>
